@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pi id="demo"></pi>
+    <script>
+      function person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+      const myFather = new person("Asharf", "Shaikh", 50, "Blue");
+      //   const myMother = new person("Rashida", "shaikh", 40, "Blue");
+      //   person.nationality = "Indian";
+      //   document.getElementById("demo").innerHTML =
+      //     "My father nationality is " + person.nationality + ".";
+      // adding functions to object
+      myFather.name = function () {
+        return this.firstName + " " + this.lastName;
+      };
+
+      // Display full name
+      document.getElementById("demo").innerHTML =
+        "My father is " + myFather.name();
+    </script>
+  </body>
+</html>
+
